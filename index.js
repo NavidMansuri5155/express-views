@@ -36,8 +36,3 @@ app.get("*", (req, res) => {
 app.listen(port, () => {
     console.log("my express server is working");
 });
-
-
-
-
-
