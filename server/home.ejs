@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/2248/PNG/512/home_circle_icon_137496.png" sizes="16x16" type="image/png">
+  <title>HOME PAGE</title>
+</head>
+
+  
+<style>
+  body{
+    background-color:  #1B0034;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="container p-3 my-5 border">
+      <div class="card">
+        <h5 class="card-header">HOME PAGE</h5>
+        <div class="card-body">
+          <h5 class="card-title">THIS ONE "HOME PAGE" IN "EJS"</h5>
+          <p class="card-text">IT IS ALSO POSSIBLE TO USE EJS.RENDER(DATAANDOPTIONS); WHERE YOU PASS EVERYTHING IN A SINGLE OBJECT. IN THAT CASE, YOU'LL END UP WITH LOCAL VARIABLES FOR ALL THE PASSED OPTIONS. HOWEVER, BE AWARE THAT YOUR CODE COULD BREAK IF WE ADD AN OPTION WITH THE SAME NAME AS ONE OF YOUR DATA OBJECT'S PROPERTIES. THEREFORE, WE DO NOT RECOMMEND USING THIS SHORTCUT</p>
+          <a href="#" class="btn btn-primary">GO HOME</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    fetch("https://api.covid19api.com/summary").then((apidata) => {
+      // console.log(apidata);
+      return apidata.json();
+    })
+    .then((orgdata) => { 
+      console.log(orgdata);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  </script> 
+</body>
+
+</html>
